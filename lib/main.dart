@@ -12,7 +12,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,31 +24,30 @@ class MyApp extends StatelessWidget {
           //   statusBarIconBrightness: Brightness.dark,
           //   statusBarBrightness: Brightness.light,
           // ),
-          color: greenColor, 
+          color: greenColor,
           elevation: 1,
-          // titleTextStyle: const TextStyle(
-          //   color: Colors.black,
-          //   fontWeight: FontWeight.w600,
-          //   fontSize: 18,
-          // ),
+          //yo vaneko k riya
+          titleTextStyle: const TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w600,
+            fontSize: 18,
+          ),
           centerTitle: true,
         ),
         textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme, 
+          Theme.of(context).textTheme,
         ),
       ),
       title: "Grocery Nepal",
       debugShowCheckedModeBanner: false,
       // home: const HomeScreen(),
-      initialBinding: BindingsBuilder(
-        (){
-          Get.put(AppController(),permanent: true);
-        }
-      ),
+      initialBinding: BindingsBuilder(() {
+        Get.put(AppController(), permanent: true);
+      }),
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
-        '/login': (contex)=> const LoginScreen(),
+        '/login': (contex) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
       },
     );
